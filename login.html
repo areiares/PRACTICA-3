@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="css/final.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Inicio de Sesión</title>
+  <link href="scss/final.css" rel="stylesheet">
+  <!-- Enlace a Font Awesome para los iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      max-width: 900px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .logo-section {
+      background-color: #E63232; 
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+
+    .logo-section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .form-section {
+      padding: 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .form-section h2 {
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .form-control {
+      margin-bottom: 15px;
+      text-align: left; /* Alinea el texto de los campos de entrada a la izquierda */
+    }
+
+    .btn-custom {
+      background-color: #E63232;
+      color: white;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-custom:hover {
+      background-color: #c52828;
+    }
+
+    .btn-custom i {
+      margin-left: 10px; /* Espacio entre el texto y la flecha */
+    }
+
+    .form-text a {
+      color: #E63232;
+    }
+
+    /* Estilos para pantallas más pequeñas */
+    @media (max-width: 768px) {
+      .login-container {
+        flex-direction: column;
+      }
+
+      .logo-section {
+        padding: 20px;
+      }
+
+      .form-section {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .form-section h2 {
+        font-size: 1.5rem;
+      }
+
+      .form-section {
+        padding: 15px;
+      }
+
+      .logo-section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <!-- Sección del logo -->
+  <div class="logo-section">
+    <img src="logo.png" alt="Logo NOTO">
+  </div>
+
+  <!-- Sección del formulario -->
+  <div class="form-section">
+    <h2>Bienvenido de nuevo</h2>
+    <p>Inicia sesión con tu cuenta</p>
+    <form class="w-100" action="login.php" method="POST">
+      <div class="mb-3">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Tu email">
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+      </div>
+      <div class="mb-3 form-check text-start">
+        <input type="checkbox" class="form-check-input" id="remember">
+        <label class="form-check-label" for="remember">Recuérdame</label>
+      </div>
+      <!-- Botón con flecha -->
+      <button type="submit" class="btn btn-custom">
+        Siguiente <i class="fas fa-arrow-right"></i>
+      </button>
+      <div class="form-text mt-3">
+        <a href="#">¿Has olvidado tu contraseña?</a>
+      </div>
+      <div class="form-text mt-3">
+        Nuevo miembro? <a href="registro.html">Regístrate aquí</a>
+
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
